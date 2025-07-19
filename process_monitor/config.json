@@ -1,0 +1,21 @@
+{
+  "monitoring_interval": 5,
+  "monitoring_duration": 90,
+  "processes_details": [
+    "PID",
+    "Process Name",
+    "CPU %",
+    "Memory (MB)",
+    "Timestamp"
+  ],
+  "db": {
+    "host": "localhost",
+    "user": "root",
+    "password": "",
+    "database": "bmc_assignment"
+  },
+  "data_file_name": "output_data.csv",
+  "processes_to_exclude": [
+    "Chrome"
+  ]
+}

@@ -1,0 +1,7 @@
+process_monitoring/config.json
+
+# Ignore virtual environments and Python junk
+venv/
+env/
+__pycache__/
+*.pyc
