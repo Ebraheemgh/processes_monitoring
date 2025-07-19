@@ -9,10 +9,10 @@
     "Timestamp"
   ],
   "db": {
-    "host": "localhost",
-    "user": "root",
-    "password": "",
-    "database": "bmc_assignment"
+    "host": "Database host",
+    "user": "Database User",
+    "password": "Database Password",
+    "database": "Database Name"
   },
   "data_file_name": "output_data.csv",
   "processes_to_exclude": [
