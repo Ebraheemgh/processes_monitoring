@@ -1,4 +1,3 @@
-process_monitoring/config.json
 output_data.csv
 # Ignore virtual environments and Python junk
 venv/
