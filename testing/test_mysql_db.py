@@ -15,18 +15,15 @@ class TestDatabaseManager(unittest.TestCase):
         self.db.connect()
 
     def tearDown(self):
-        try:
+        if self.db.connection.is_connected():
             self.db.close()
-        except Exception as e:
-            print(f"Failed to close connection: {e}")
 
     def test_connection(self):
-        assert self.db.connection is not None, "Connection is Failed"
+        assert self.db.connection.is_connected(), "Connection is not closed"
 
     def test_close_connection(self):
-        self.db = DatabaseManager(self.config)
         self.db.close()
-        assert self.db.connection is None, "Connection is not closed"
+        assert not self.db.connection.is_connected(), "Connection is not closed"
 
     def test_execute_and_commit(self):
         self.db.execute(f"DROP TABLE IF EXISTS {self.table_name_to_create}")
